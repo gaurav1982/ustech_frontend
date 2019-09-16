@@ -1,0 +1,31 @@
+<a   (click) = "onClick(player.playerId)" routerLinkActive = "active"
+style="cursor: pointer;" class="list-group-item clearfix"
+*ngFor = "let player_detail of playerDetail" >
+
+<div class="row">
+    <div class="col-xs-12">
+      <img src="https://www.sticksports.com/wp-content/uploads/2017/11/ICON_Stick_Cricket_Android.png" alt="" class="img-responsive" style="max-height:300px;">
+    </div>
+</div>
+  <div class="row">
+      <div class="col-xs-12">
+        <h3 class="list-group-item clearfix">{{player_detail.firstName}} {{player_detail.secondName}}</h3>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+          <h3 class="list-group-item clearfix">Matches : {{player_detail.total_match}}</h3>
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-xs-12">
+            <h3 class="list-group-item clearfix">Runs : {{player_detail.total_run}}</h3>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+             <h3 class="list-group-item clearfix">Total Sixes : {{player_detail.total_sixes}}</h3>
+            </div>
+          </div>
+
+</a>

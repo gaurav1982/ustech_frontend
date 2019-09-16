@@ -1,0 +1,16 @@
+<table>
+  <tr>
+    <th>Team 1</th>
+    <th>Team 2</th>
+    <th>Scheduled date</th>
+    <th>Result</th>
+  </tr>
+  <tr *ngFor = "let match of matches">
+    <td>{{match.team1_name}}</td>
+    <td>{{match.team2_name}}</td>
+    <td>{{match.schedule_time}}</td>
+    <td *ngIf = "match.result == 1">{{match.team1_name}}</td>
+    <td *ngIf = "match.result == 2">{{match.team2_name}}</td>
+    <td *ngIf = "match.result == 0">NA</td>
+  </tr>
+</table>

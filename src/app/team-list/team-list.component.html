@@ -1,0 +1,30 @@
+<div class = "row">
+  <div class = "col-xs-6">
+      <div class = "row">
+          <div class="col-xs-12" style = "text-align: center">
+            <h3>Team List</h3>
+          </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <a (click) = "onClick(team.teamId,'/players',0)" routerLinkActive = "active" style="cursor: pointer;" class="list-group-item clearfix" *ngFor = "let team of teams;let i = index" >
+              <div class= "col-xs-4">
+                  <h2 class="">{{team.teamName}}</h2>
+              </div>
+              <div class = "col-xs-2">
+                <span (click) = "onClick(team.teamId,'/matches',0)">Matches</span>
+                  </div>
+                  <div class = "col-xs-2">
+                <span (click) = "onClick(team.teamId,'/matches',1)">Fixtures</span>
+             </div>
+              <span class = "pull-right">
+                 <img [src] = "team.teamLogo" class="img-responsive" style="max-height:50px;"/>
+              </span>
+          </a>
+        </div>
+      </div>
+  </div>
+  <div class = "col-xs-6">
+    <app-schedule-match></app-schedule-match>
+  </div>
+</div>
