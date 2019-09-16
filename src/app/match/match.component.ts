@@ -11,7 +11,7 @@ import {Router} from '@angular/router';
 export class MatchComponent implements OnInit {
 
   constructor(private _http : HttpClient , private teamService : TeamServiceService , private router : Router) { }
-  matches = [];
+  matches;
   ngOnInit() {
     if(!this.teamService.team_id)
     {
